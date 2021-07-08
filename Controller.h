@@ -1,8 +1,6 @@
 #ifndef CONTROLLER_H_
 #define CONTROLLER_H_
 
-#include "Pedestal/common.h"
-
 typedef enum {
 	CTRL_PI_SERIES,
 	CTRL_PI_PARALLEL,
@@ -27,7 +25,7 @@ typedef struct {
 } ControllerProp_t;
 
 typedef struct Controller_t {
-	double (*controll)(struct Controller_t *, double, double, double, double);
+	double (*control)(struct Controller_t *, double, double, double, double);
 	ControllerProp_t prop;
 } Controller_t;
 
